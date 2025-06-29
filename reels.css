@@ -1,0 +1,77 @@
+/* ======== СЕКЦИЯ РИЛСОВ (КАРУСЕЛЬ) ======== */
+
+.reels-carousel {
+    max-width: 1600px;
+    margin: 100px auto;
+    padding: 0 clamp(16px, 4vw, 60px);
+    text-align: center;
+}
+
+.section-title {
+    font-size: clamp(28px, 4vw, 42px);
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.reels-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reels-track {
+    display: flex;
+    gap: 24px;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+    justify-content: center;
+    align-items: center;
+}
+
+.reels-track video {
+    width: 240px;
+    height: 420px;
+    border-radius: 12px;
+    object-fit: cover;
+    flex-shrink: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0.6;
+    transform: scale(0.75);
+}
+
+.reels-track video.active {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 2;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32px;
+    background: rgba(0,0,0,0.6);
+    border: none;
+    color: #fff;
+    padding: 12px 16px;
+    cursor: pointer;
+    z-index: 3;
+    border-radius: 50%;
+    transition: background 0.2s ease;
+}
+
+.arrow:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}

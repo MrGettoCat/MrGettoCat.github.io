@@ -1,0 +1,61 @@
+.site-footer {
+    background: #111;
+    color: #aaa;
+    padding: 40px 20px;
+    font-size: 14px;
+    border-top: 1px solid #222;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+
+}
+
+.footer-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    max-width: none;
+    width: 100%;
+}
+
+.footer-years {
+    font-size: 14px;
+    color: #666;
+}
+
+.footer-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 16px;
+}
+
+.footer-text {
+    color: #fff;
+}
+
+.telegram-link {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.telegram-link:hover {
+    transform: scale(1.1);
+}
+
+.telegram-icon {
+    width: 24px;
+    height: 24px;
+    color: #00aff0;
+    filter: drop-shadow(0 0 4px rgba(0,0,0,0.5));
+}
+
+.telegram-link:hover .telegram-icon {
+    color: #ffffff;
+}

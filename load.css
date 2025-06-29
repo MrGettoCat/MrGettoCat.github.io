@@ -1,0 +1,15 @@
+body:not(.loaded) .carousel-overlay,
+body:not(.loaded) .about-me,
+body:not(.loaded) .about-shapes {
+    visibility: hidden;
+    opacity: 0;
+    transition: none;
+}
+
+body.loaded .carousel-overlay,
+body.loaded .about-me,
+body.loaded .about-shapes {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}

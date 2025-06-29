@@ -1,0 +1,18 @@
+.about-me {
+    max-width: 1600px;
+    margin: 60px auto;
+    padding: 0 clamp(16px, 4vw, 60px);
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    position: relative;
+    z-index: 10;
+}
+
+.about-shapes {
+    display: flex;
+    gap: 24px;
+    align-items: stretch;
+}
+
+

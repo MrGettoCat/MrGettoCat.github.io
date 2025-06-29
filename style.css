@@ -1,0 +1,303 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+}
+
+
+.carousel-container {
+    position: relative;
+    width: 5000%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    overflow: hidden;
+    padding: 40px 0;
+    align-items: center;
+}
+
+.carousel-row {
+    display: flex;
+    gap: 24px;
+    will-change: transform;
+}
+
+.carousel-row img {
+    width: clamp(200px, 18vw, 400px);
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.carousel-row img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+.site-wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 clamp(16px, 4vw, 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Скорости для разных этажей */
+.carousel-row:nth-child(1) { animation-duration: 20s; }
+.carousel-row:nth-child(2) { animation-duration: 25s; }
+.carousel-row:nth-child(3) { animation-duration: 30s; }
+.carousel-row:nth-child(4) { animation-duration: 35s; }
+
+
+
+
+.carousel-wrapper {
+    position: relative;
+    overflow: visible;
+    height: 100vh; /* или конкретная высота, если карусель не растягивается */
+    min-height: 100vh;
+    z-index: 1;
+}
+
+
+/* Тень от низа вверх */
+.carousel-shadow {
+    position: absolute;
+    bottom: 3.5% ;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    height: 30%; /* или 100% если нужно */
+    pointer-events: none;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent 60%);
+    z-index: 0;
+}
+
+/* Контейнер для текста и логотипа */
+.carousel-overlay {
+    position: absolute;
+    z-index: 3;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none;
+    color: white;
+    /* Мягкая тень вокруг всего блока */
+    filter: drop-shadow(0 0 15px rgba(0,0,0,0.7));
+}
+
+/* Логотип */
+.carousel-overlay .logo {
+    width: clamp(80px, 12vw, 160px);
+    height: auto;
+    margin-bottom: 16px;
+    pointer-events: none;
+    /* Тень вокруг логотипа */
+    filter: drop-shadow(0 0 12px rgba(0,0,0,0.8));
+}
+
+/* Текст */
+.carousel-overlay .overlay-text {
+    font-size: clamp(20px, 4vw, 48px);
+    font-weight: 600;
+    pointer-events: none;
+    text-shadow:
+            0 0 80px rgba(0, 0, 0, 0.9),
+            0 0 200px rgba(0, 0, 0, 1);
+}
+
+.about-me {
+    max-width: 1600px;
+    margin: 60px auto;
+    padding: 0 clamp(16px, 4vw, 60px);
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    position: relative;
+    z-index: 10;
+}
+
+.about-shapes {
+    display: flex;
+    gap: 24px;
+    align-items: stretch;
+}
+
+/* Общие стили для шейпов */
+.shape {
+    border-radius: 16px;
+    padding: 24px 32px;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #222, #444); /* тёмный градиент */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Левая — большой прямоугольник */
+.shape-left {
+    flex: 3;
+}
+
+/* Правая — узкий прямоугольник */
+.shape-right {
+    flex: 1;
+    background: linear-gradient(135deg, #333, #555);
+}
+
+/* Заголовки */
+.shape-left h2,
+.shape-right h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: clamp(24px, 3vw, 36px);
+    color: #fff;
+}
+
+/* Параграф в левой */
+.shape-left p {
+    font-size: clamp(16px, 2vw, 20px);
+    line-height: 1.5;
+}
+
+/* Статистика справа */
+.shape-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: clamp(18px, 2.5vw, 22px);
+}
+
+.shape-right li {
+    margin-bottom: 12px;
+}
+
+.shape-right strong {
+    color: #8a2be2; /* например, золотой акцент */
+}
+* {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE10+/Edge */
+    user-select: none;         /* Стандарт */
+}
+img {
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+/*Верхнее меню */
+.main-menu {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: rgba(30, 30, 30, 0.9);
+    border-radius: 999px; /* овал */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.24);
+    padding: 12px 24px;
+    backdrop-filter: blur(5px);
+}
+
+.menu-content {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.menu-logo {
+    height: 40px;
+    width: auto;
+    pointer-events: none;
+    filter: drop-shadow(0 0 8px rgba(0,0,0,0.7));
+}
+
+.menu-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.menu-btn:hover {
+    transform: scale(1.05);
+    color: #ffd700;
+}
+
+@media (max-width: 480px) {
+    html, body {
+        overflow-x: hidden;
+        touch-action: pan-y;             /* запрет горизонтальных свайпов, разрешить вертикальные */
+        overscroll-behavior-x: contain; /* предотвратить отскок/прокрутку за края по горизонтали */
+        -webkit-overflow-scrolling: auto; /* отключить инерцию на iOS */
+    }
+
+    /* Если нужно конкретно для контейнеров карусели */
+    .carousel-container, .carousel-row {
+        overflow-x: hidden;
+        touch-action: pan-y;
+        overscroll-behavior-x: contain;
+    }
+    .main-menu {
+        top: 15px;                  /* чуть выше, чтобы не мешало */
+        padding: 8px 16px;          /* поменьше отступы */
+        gap: 12px;                  /* уменьшаем расстояния между элементами */
+        width: 55vw;                /* чуть уже, но почти весь экран */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .menu-content {
+        gap: 12px;
+        justify-content: center;    /* центрируем кнопки */
+        flex-wrap: wrap;            /* если много кнопок, переносятся */
+    }
+
+    .menu-logo {
+        height: 30px;               /* чуть меньше логотип */
+        filter: drop-shadow(0 0 5px rgba(0,0,0,0.7));
+    }
+
+    .menu-btn {
+        font-size: 14px;            /* чуть меньше шрифт */
+        padding: 6px 12px;          /* добавим внутренние отступы для удобства */
+    }
+}
+
+
+@media (max-width: 480px) {
+    .carousel-overlay {
+        top: 30%;                 /* Смещаем чуть выше центра */
+        left: 50%;
+        transform: translate(-50%, -30%);
+        width: 90vw;              /* Ширина почти во весь экран */
+        padding: 0 10px;          /* Немного внутренних отступов */
+        text-align: center;
+    }
+
+    .carousel-overlay .logo {
+        width: clamp(50px, 25vw, 100px); /* Меньше логотип */
+        margin-bottom: 12px;
+    }
+
+    .carousel-overlay .overlay-text {
+        font-size: clamp(16px, 5vw, 28px); /* Меньше размер шрифта */
+        font-weight: 600;
+        text-shadow:
+                0 0 40px rgba(0, 0, 0, 0.8),
+                0 0 100px rgba(0, 0, 0, 0.9);
+    }
+}
