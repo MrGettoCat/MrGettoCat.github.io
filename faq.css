@@ -58,6 +58,7 @@
 /* Ответ */
 .faq-section .faq-answer {
     max-height: 0;
+    text-align: left;
     overflow: hidden;
     padding: 0 24px;
     font-size: clamp(14px, 1.8vw, 18px);
