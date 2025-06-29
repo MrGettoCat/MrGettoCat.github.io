@@ -1,10 +1,10 @@
 /* Стили для обёртки и карточек */
-.work-item {
+.video-player-box .work-item {
     cursor: pointer;
     position: relative;
 }
 
-.video-wrapper {
+.video-player-box .video-wrapper {
     position: relative;
     width: 100%;
     max-width: 400px;
@@ -12,8 +12,8 @@
     border-radius: 12px;
 }
 
-.video-wrapper video,
-.video-wrapper img {
+.video-player-box .video-wrapper video,
+.video-player-box .video-wrapper img {
     display: block;
     width: 100%;
     height: auto;
@@ -26,7 +26,7 @@
     z-index: 1;
 }
 
-.video-wrapper img.video-poster {
+.video-player-box .video-wrapper img.video-poster {
     position: absolute;
     top: 0;
     left: 0;
@@ -34,19 +34,19 @@
     opacity: 1;
 }
 
-.video-wrapper video.video-element {
+.video-player-box .video-wrapper video.video-element {
     opacity: 0;
 }
 
-.video-wrapper.playing video.video-element {
+.video-player-box .video-wrapper.playing video.video-element {
     opacity: 1;
 }
 
-.video-wrapper.playing img.video-poster {
+.video-player-box .video-wrapper.playing img.video-poster {
     opacity: 0;
 }
 
-.play-icon {
+.video-player-box .play-icon {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -61,12 +61,12 @@
     z-index: 3;
 }
 
-.video-wrapper:hover .play-icon {
+.video-player-box .video-wrapper:hover .play-icon {
     opacity: 1;
 }
 
 /* Оверлей видеоплеера */
-.video-overlay {
+.video-player-box .video-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -80,20 +80,20 @@
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.video-overlay.hidden {
+.video-player-box .video-overlay.hidden {
     opacity: 0;
     pointer-events: none;
     transform: scale(0.98);
 }
 
-.video-overlay:not(.hidden) {
+.video-player-box .video-overlay:not(.hidden) {
     opacity: 1;
     pointer-events: auto;
     transform: scale(1);
 }
 
 /* Плеер */
-.player-box {
+.video-player-box .player-box {
     position: relative;
     max-width: 90vw;
     max-height: 90vh;
@@ -107,14 +107,14 @@
     gap: 16px;
 }
 
-#customPlayer {
+.video-player-box #customPlayer {
     width: 100%;
     border-radius: 12px;
     outline: none;
 }
 
 /* Кастомные контролы */
-.controls {
+.video-player-box .controls {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -124,7 +124,7 @@
     flex-wrap: wrap;
 }
 
-.time-info {
+.video-player-box .time-info {
     display: flex;
     align-items: center;
     gap: 6px;
@@ -132,7 +132,7 @@
     font-size: 14px;
 }
 
-.progress-bar {
+.video-player-box .progress-bar {
     position: relative;
     width: 100%;
     height: 8px;
@@ -143,7 +143,7 @@
     margin-top: 8px;
 }
 
-.progress-filled {
+.video-player-box .progress-filled {
     position: absolute;
     height: 100%;
     background: #ff5252;
@@ -151,17 +151,17 @@
     transition: width 0.1s ease;
 }
 
-.current-time,
-.duration {
+.video-player-box .current-time,
+.video-player-box .duration {
     font-size: 14px;
     color: #ccc;
 }
 
-button,
-#fullscreenBtn,
-#settingsBtn,
-#playPauseBtn,
-#closePlayerBtn {
+.video-player-box button,
+.video-player-box #fullscreenBtn,
+.video-player-box #settingsBtn,
+.video-player-box #playPauseBtn,
+.video-player-box #closePlayerBtn {
     background: #333;
     border: none;
     color: white;
@@ -176,7 +176,7 @@ button,
     border-radius: 6px;
 }
 
-button:hover {
+.video-player-box button:hover {
     transform: scale(1.2);
 }
 

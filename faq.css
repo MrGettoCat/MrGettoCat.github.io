@@ -1,4 +1,5 @@
 .faq-section {
+    all: unset;
     max-width: 1000px;
     margin: 100px auto;
     padding: 0 clamp(16px, 4vw, 60px);
@@ -6,13 +7,13 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
-.faq-list {
+.faq-section .faq-list {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.faq-item {
+.faq-section .faq-item {
     border-radius: 12px;
     background: linear-gradient(135deg, #1e1e1e, #2e2e2e);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
@@ -22,7 +23,7 @@
 }
 
 /* Кнопка-вопрос */
-.faq-question {
+.faq-section .faq-question {
     width: 100%;
     padding: 20px 24px;
     background: none;
@@ -35,11 +36,11 @@
     transition: background 0.3s ease;
 }
 
-.faq-question:hover {
+.faq-section .faq-question:hover {
     background: rgba(255, 255, 255, 0.05);
 }
 
-.faq-question::after {
+.faq-section .faq-question::after {
     content: '➤';
     position: absolute;
     right: 24px;
@@ -50,12 +51,12 @@
     color: #8a2be2;
 }
 
-.faq-item.open .faq-question::after {
+.faq-section .faq-item.open .faq-question::after {
     transform: translateY(-50%) rotate(90deg);
 }
 
 /* Ответ */
-.faq-answer {
+.faq-section .faq-answer {
     max-height: 0;
     overflow: hidden;
     padding: 0 24px;
@@ -66,14 +67,14 @@
     transition: max-height 0.5s ease, padding 0.4s ease, opacity 0.4s ease;
 }
 
-.faq-item.open .faq-answer {
+.faq-section .faq-item.open .faq-answer {
     max-height: 300px;
     padding: 16px 24px 24px;
     opacity: 1;
 }
 
 /* Эффект при наведении — только если ещё не открыт */
-.faq-item:not(.open):hover {
+.faq-section .faq-item:not(.open):hover {
     transform: scale(1.02);
     transition: transform 0.3s ease;
     box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);

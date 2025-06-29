@@ -6,7 +6,7 @@
     text-align: center;
 }
 
-.works-filters {
+.works-section .works-filters {
     display: flex;
     justify-content: center;
     gap: 16px;
@@ -14,7 +14,7 @@
     flex-wrap: wrap;
 }
 
-.filter-btn {
+.works-section .filter-btn {
     background: #222;
     color: #fff;
     padding: 10px 20px;
@@ -24,20 +24,20 @@
     transition: background 0.3s ease;
 }
 
-.filter-btn.active,
-.filter-btn:hover {
+.works-section .filter-btn.active,
+.works-section .filter-btn:hover {
     background: #ffd700;
     color: #000;
 }
 
-.works-list {
+.works-section .works-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
 }
 
-.work-item {
+.works-section .work-item {
     width: 300px;
     opacity: 0;
     transform: translateY(40px);
@@ -49,21 +49,21 @@
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
-.work-item video {
+.works-section .work-item video {
     width: 100%;
     border-radius: 8px;
 }
 
-.work-title {
+.works-section .work-title {
     margin-top: 12px;
     font-weight: 600;
 }
-.work-item.visible {
+.works-section .work-item.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-.horizontal-subfilters {
+.works-section .horizontal-subfilters {
     display: none;
     justify-content: center;
     gap: 12px;
@@ -74,13 +74,13 @@
     transition: all 0.4s ease;
 }
 
-.horizontal-subfilters.show {
+.works-section .horizontal-subfilters.show {
     display: flex;
     opacity: 1;
     transform: translateY(0);
 }
 
-.subfilter-btn {
+.works-section .subfilter-btn {
     background: #333;
     color: #fff;
     border: none;
@@ -90,8 +90,8 @@
     transition: background 0.3s ease;
 }
 
-.subfilter-btn.active,
-.subfilter-btn:hover {
+.works-section .subfilter-btn.active,
+.works-section .subfilter-btn:hover {
     background: #ffd700;
     color: #000;
 }
